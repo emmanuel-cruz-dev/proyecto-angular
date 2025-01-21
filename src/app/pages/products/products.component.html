@@ -11,13 +11,17 @@
       </tr>
     </thead>
     <tbody>
+      @for (item of productList; track $index) {
       <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>mdo</td>
-        <td>mdo</td>
+        <th scope="row">{{ item.id }}</th>
+        <td>{{ item.title }}</td>
+        <td>{{ item.price }}</td>
+        <td>{{ item.description }}</td>
+        <td>
+          <button type="button" class="btn btn-outline-primary">Details</button>
+        </td>
       </tr>
+      }
     </tbody>
   </table>
 </div>
