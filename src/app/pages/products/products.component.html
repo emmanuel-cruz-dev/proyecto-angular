@@ -15,10 +15,16 @@
       <tr>
         <th scope="row">{{ item.id }}</th>
         <td>{{ item.title }}</td>
-        <td>{{ item.price }}</td>
+        <td>{{ item.price | currency }}</td>
         <td>{{ item.description }}</td>
         <td>
-          <button type="button" class="btn btn-outline-primary">Details</button>
+          <button
+            type="button"
+            class="btn btn-outline-primary"
+            (click)="navegate(item.id)"
+          >
+            Details
+          </button>
         </td>
       </tr>
       }
