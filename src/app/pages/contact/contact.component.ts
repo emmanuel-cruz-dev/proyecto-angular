@@ -13,17 +13,12 @@ import {
   styleUrl: './contact.component.css',
 })
 export class ContactComponent implements OnInit {
-  contactForm?: FormGroup;
+  contactForm!: FormGroup;
 
   constructor(private _formBuilder: FormBuilder) {
     this.contactForm = this._formBuilder.group({
-      firstName: ['', Validators.required],
-      lastName: ['', Validators.required],
-      username: ['', Validators.required],
-      city: ['', Validators.required],
-      state: ['', Validators.required],
-      zip: ['', Validators.required],
-      agreeTerms: [false, Validators.requiredTrue],
+      email: ['', [Validators.required, Validators.email]],
+      message: ['', [Validators.required, Validators.minLength(10)]],
     });
   }
 
@@ -31,6 +26,7 @@ export class ContactComponent implements OnInit {
 
   enviar(event: Event) {
     event.preventDefault();
-    console.log('Enviado');
+    console.log(event);
+    console.log(this.contactForm.value);
   }
 }
