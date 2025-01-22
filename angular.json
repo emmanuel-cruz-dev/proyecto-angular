@@ -26,7 +26,7 @@
                 "input": "public/assets",
                 "output": "/assets"
               },
-              "public/assets/favicon.ico"
+              "src/favicon.ico"
             ],
             "styles": [
               "src/styles.css",
