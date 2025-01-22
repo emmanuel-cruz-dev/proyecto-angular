@@ -1,4 +1,16 @@
 .general-styles{
   background-color: black;
   color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
