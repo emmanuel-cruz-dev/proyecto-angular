@@ -23,10 +23,10 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "src/assets",
+                "input": "public/assets",
                 "output": "/assets"
               },
-              "src/favicon.ico"
+              "public/assets/favicon.ico"
             ],
             "styles": [
               "src/styles.css",
