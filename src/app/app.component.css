@@ -4,6 +4,7 @@
 
 .general-styles {
   font-family: "Mark Pro", Helvetica Neue, sans-serif;
+  position: relative;
 }
 
 .navbar {
@@ -50,4 +51,16 @@
 
 .language__button__container button.active {
   font-weight: 600;
+}
+
+.menu-backdrop {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+  top: var(--backdrop-top);
+  left: var(--backdrop-left);
+  width: var(--backdrop-width);
+  height: var(--backdrop-height);
+  transition: all 0.3s ease-in-out;
 }
