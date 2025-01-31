@@ -3,8 +3,8 @@
 } */
 
 .general-styles {
-  background-color: black;
-  color: white;
+  /* background-color: black; */
+  /* color: white; */
   font-family: "Mark Pro", Helvetica Neue, sans-serif;
 }
 
@@ -43,4 +43,18 @@
 .navbar-nav{
   display: flex;
   gap: 1.5rem;
+}
+
+.language__button__container{
+  display: flex;
+  align-items: center;
+}
+
+.language__button__container button{
+  border: none;
+  background-color: transparent;
+}
+
+.language__button__container button.active {
+  font-weight: 600;
 }
