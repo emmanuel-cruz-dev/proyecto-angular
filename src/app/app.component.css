@@ -3,8 +3,6 @@
 } */
 
 .general-styles {
-  /* background-color: black; */
-  /* color: white; */
   font-family: "Mark Pro", Helvetica Neue, sans-serif;
 }
 
@@ -13,7 +11,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  padding: 1rem 3rem;
+  padding: 1.5rem 3rem;
 }
 
 .name__container {
@@ -35,10 +33,10 @@
   justify-content: flex-end;
 }
 
-.collapse {
+/* .collapse {
   display: flex;
   justify-content: center;
-}
+} */
 
 .navbar-nav{
   display: flex;
