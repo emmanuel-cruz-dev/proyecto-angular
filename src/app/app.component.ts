@@ -31,6 +31,11 @@ export class AppComponent implements AfterViewInit {
         menuBackdrop.style.setProperty('--backdrop-left', `${left}px`);
         menuBackdrop.style.setProperty('--backdrop-width', `${width}px`);
         menuBackdrop.style.setProperty('--backdrop-height', `${height}px`);
+        menuBackdrop.style.opacity = 1;
+      });
+
+      this.renderer.listen(el, 'mouseleave', () => {
+        menuBackdrop.style.opacity = 0;
       });
     });
   }
