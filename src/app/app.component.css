@@ -2,6 +2,13 @@
   border: 1px solid red;
 } */
 
+:root {
+  --backdrop-top: 0;
+  --backdrop-left: 0;
+  --backdrop-width: 0;
+  --backdrop-height: 0;
+}
+
 .general-styles {
   font-family: "Mark Pro", Helvetica Neue, sans-serif;
   position: relative;
@@ -55,12 +62,13 @@
 
 .menu-backdrop {
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0.3);
+  /* backdrop-filter: blur(5px); */
   border-radius: 10px;
   top: var(--backdrop-top);
   left: var(--backdrop-left);
   width: var(--backdrop-width);
   height: var(--backdrop-height);
   transition: all 0.3s ease-in-out;
+  z-index: 10;
 }

@@ -25,11 +25,12 @@ export class AppComponent implements AfterViewInit {
     const menuBackdrop = this.el.nativeElement.querySelector('#menu-backdrop');
 
     headerEls.forEach((el: HTMLElement) => {
-      this.renderer.listen(el, 'mouseenter', () => {
-        this.renderer.setStyle(menuBackdrop, '--backdrop-opacity', '1');
-      });
-      this.renderer.listen(el, 'mouseleave', () => {
-        this.renderer.setStyle(menuBackdrop, '--backdrop-opacity', '0');
+      this.renderer.listen(el, 'mouseenter', (event) => {
+        const { left, top, width, height } = el.getBoundingClientRect();
+        menuBackdrop.style.setProperty('--backdrop-top', `${top}px`);
+        menuBackdrop.style.setProperty('--backdrop-left', `${left}px`);
+        menuBackdrop.style.setProperty('--backdrop-width', `${width}px`);
+        menuBackdrop.style.setProperty('--backdrop-height', `${height}px`);
       });
     });
   }
