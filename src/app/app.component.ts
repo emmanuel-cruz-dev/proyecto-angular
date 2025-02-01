@@ -25,7 +25,7 @@ export class AppComponent implements AfterViewInit {
     const menuBackdrop = this.el.nativeElement.querySelector('#menu-backdrop');
 
     headerEls.forEach((el: HTMLElement) => {
-      this.renderer.listen(el, 'mouseenter', (event) => {
+      this.renderer.listen(el, 'mouseenter', () => {
         const { left, top, width, height } = el.getBoundingClientRect();
         menuBackdrop.style.setProperty('--backdrop-top', `${top}px`);
         menuBackdrop.style.setProperty('--backdrop-left', `${left}px`);
