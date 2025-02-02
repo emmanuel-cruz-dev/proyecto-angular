@@ -62,13 +62,14 @@
 
 .menu-backdrop {
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.1);
   /* backdrop-filter: blur(5px); */
-  /* border-radius: 10px; */
+  border-radius: 10px;
   top: var(--backdrop-top);
   left: var(--backdrop-left);
   width: var(--backdrop-width);
   height: var(--backdrop-height);
+  transform: translateY(var(--backdrop-top)), translateX(var(--backdrop-left));
   opacity: 0;
   z-index: -1;
   transition: all 0.3s ease-in-out;
